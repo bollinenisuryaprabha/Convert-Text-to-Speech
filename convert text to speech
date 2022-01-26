@@ -1,0 +1,27 @@
+""" First we need to import gtts(Google Text-to-Speech).It is an in-bulit python module. we install 
+    this in pycharm using pip install gtts.
+    Import playsound module in the code using pip install playsound.
+    enter any input to perform the code operation.
+    first it save the speech in an .mp3 format (if the text is long it takes some time to convert into speech).
+    then using playsound module the saved .mp3 file is played.
+"""
+import gtts
+from playsound import playsound
+N=input()
+""" if you want to write input in more than one line use backslash.
+     for example,
+     "In recent times, with the increase of technology, Passwords which are \
+      used by the people for logging into the websites were being hacked \
+      thereby cyber crimes are being increased.\
+      Hacking the users Password and logging into the websites and trying to \
+      steal the useful information is commonly being happened now-a-days. \
+      According to the survey of National Crime Records Bureau(NCB)nearly 50,035 cases of cyber crimes were reported in 2020. India is one \
+      of the most effected countries in terms if ransomware attacks,\
+      according to a global survey by 'The state of Ransomware 2021'. \
+      The main aim of this project is to prevent the cyber crimes by using the\
+      'Graphical Password Authentication system'"
+"""
+print("The text is converted into speech:")
+tts=gtts.gTTS(n,lang="en")
+tts.save("sample.mp3")
+playsound("sample.mp3")
